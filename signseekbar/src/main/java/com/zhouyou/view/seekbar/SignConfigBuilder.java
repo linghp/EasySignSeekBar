@@ -16,8 +16,8 @@
 
 package com.zhouyou.view.seekbar;
 
-import android.support.annotation.ColorInt;
-import android.support.annotation.IntRange;
+import androidx.annotation.ColorInt;
+import androidx.annotation.IntRange;
 
 import java.text.NumberFormat;
 

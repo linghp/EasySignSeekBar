@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdk 33
     defaultConfig {
         applicationId "com.zhouyou.samlpe.signseekbar"
-        minSdkVersion 14
-        targetSdkVersion 25
+        minSdk 19
+        targetSdk 33
         versionCode 7
         versionName "1.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -19,22 +18,10 @@ android {
         }
     }
 
-    android.applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            if (output.outputFile != null && output.outputFile.name.endsWith('.apk')) {
-                def name = "${rootDir}/apk/signseekbar_demo.apk"
-                output.outputFile = file(name)
-            }
-        }
-    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:23.0.1'
-    testCompile 'junit:junit:4.12'
-    compile project(':signseekbar')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':signseekbar')
+    implementation("androidx.appcompat:appcompat:1.6.1")
 }

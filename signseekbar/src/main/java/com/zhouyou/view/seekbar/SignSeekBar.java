@@ -31,8 +31,6 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.annotation.IntDef;
-import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.Layout;
 import android.text.Spanned;
@@ -51,6 +49,9 @@ import java.text.NumberFormat;
 import static com.zhouyou.view.seekbar.SignSeekBar.TextPosition.BELOW_SECTION_MARK;
 import static com.zhouyou.view.seekbar.SignSeekBar.TextPosition.BOTTOM_SIDES;
 import static com.zhouyou.view.seekbar.SignSeekBar.TextPosition.SIDES;
+
+import androidx.annotation.IntDef;
+import androidx.core.content.ContextCompat;
 
 /**
  * <p>描述：一个漂亮而强大的Android自定义SeekBar，它有一个带有进度的提示牌 sign:指示牌。</p>
